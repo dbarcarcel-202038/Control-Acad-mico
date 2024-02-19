@@ -1,7 +1,7 @@
 const { response } = require('express');
-const Student = require('../models/student');
-const Teacher = require('../models/teacher');
-const Curse = require('../models/curse');
+const Teacher = require("../user/teacher.model.js");
+const Student = require("../user/student.model.js");
+const Curse = require('../course');
 
 const studentExists = async (correo = '') => {
     const correoExistente = await Student.findOne({ correo });

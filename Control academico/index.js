@@ -1,6 +1,7 @@
-//Ejecutar servicios
-import { initServer } from "./configs/app.js"
-import { connect } from "./configs/mongo.js"
+const Server = require("./models/server");
 
-initServer()
-connect()
+require('dotenv').config();
+
+const servidor = new Server();
+
+servidor.starServer();
